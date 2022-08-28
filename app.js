@@ -7,20 +7,12 @@ let nameField = document.querySelector("#taskName");
 let myARray = [];
 let removeBtn = document.querySelector(".removeBtn");
 
-function test() {
+button.addEventListener("click", renderInfo);
+
+//renderInfo() gets the inputted value from the text field and stores it as nameText. A new variable called newItem stores a new CreateToDoItem which has the nameText as its arguments. create() is then called.
+
+function renderInfo() {
   let nameText = nameField.value;
   let newItem = new CreateToDoItem(nameText, "Test");
   create(newItem.name, newItem.dueDate);
 }
-
-button.addEventListener("click", test);
-
-//Get Data from the form input
-
-//Create a new to do item from captured data
-
-//Render the data on a webpage
-create("RED", "Orange");
-create("RED", "Orange");
-
-removeBtn.addEventListener("click", function () {});
