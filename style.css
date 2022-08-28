@@ -1,13 +1,94 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .25fr 2fr; 
+    grid-template-rows: 1fr;
+}
+
+#form
+{
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    background-color: beige;
+    border: 2px black solid;
+
+    padding: 20px;
+    gap: 15px;
+    width: 450px;
+    height: 450px;
+}
+
+.taskContainer
+{
+    grid-column: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.taskContent
+{
+   width: 70%;
+   height: 50%;
+border: 2px black solid;
+}
+
+.topContent
+{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.addTaskButton
+{
+    height: 25px;
+    width: 25px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.tasksGrid
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: red;
+  
+
+}
 .toDoCard
 {
     display: flex;
     flex-direction: column;
 
-    gap: 20px;
+    gap: 5px;
     background-color: lightgray;
     padding: 10px;
-    width: 450px;
-    height: 300px;
+    width: auto;
+    height: auto;
+ 
     border: 2px solid black;
     border-radius: 5px;
+    font-size: 1.2rem;
 }
+
+.cardTitle
+{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+

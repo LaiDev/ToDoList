@@ -1,6 +1,19 @@
+let name = "Aalaizha";
+let WelcomeMessage = document.querySelector(".welcomeMessage");
+WelcomeMessage.innerHTML = `Welcome, ${name}`;
+
+let tasks = document.querySelector(".tasksGrid");
+console.log(tasks.length)
+
+const createTaskButton = document.querySelector(".addTaskButton");
+
+createTaskButton.addEventListener("click", function () {
+  document.querySelector("#form").style.visibility = "visible";
+});
+
 //Will create the to do cards as well as updating their text as new to do list items are created
 
-let container = document.querySelector(".toDoCardsContainer");
+let container = document.querySelector(".tasksGrid");
 
 export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   let cardDiv = document.createElement("div");

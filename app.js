@@ -21,6 +21,7 @@ function renderInfo() {
   create(newItem.name, newItem.dueDate, newItem.priority, newItem.description);
 
   document.getElementById("form").reset();
+  document.getElementById("form").style.visibility = "hidden";
+
+
 }
-
-
