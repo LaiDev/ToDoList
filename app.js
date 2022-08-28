@@ -15,4 +15,6 @@ function renderInfo() {
   let nameText = nameField.value;
   let newItem = new CreateToDoItem(nameText, "Test");
   create(newItem.name, newItem.dueDate);
+
+  nameField.value = "";
 }
