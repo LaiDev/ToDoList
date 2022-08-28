@@ -1,9 +1,11 @@
 import { CreateToDoItem } from "./scripts/createToDo.js";
 import { create } from "./scripts/DOM.js";
 
-let form = document.querySelector(".form");
 let button = document.querySelector(".createButton");
 let nameField = document.querySelector("#taskName");
+let dateField = document.querySelector("#taskDueDate");
+let priorityField = document.querySelector("#taskPriority");
+let descriptionField = document.querySelector("#taskDescription");
 let myARray = [];
 let removeBtn = document.querySelector(".removeBtn");
 
@@ -13,8 +15,17 @@ button.addEventListener("click", renderInfo);
 
 function renderInfo() {
   let nameText = nameField.value;
-  let newItem = new CreateToDoItem(nameText, "Test");
-  create(newItem.name, newItem.dueDate);
+  let dateText = dateField.value;
+  let priorityText = priorityField.value;
+  let descriptionText = descriptionField.value;
 
-  nameField.value = "";
+  let newItem = new CreateToDoItem(
+    nameText,
+    dateText,
+    priorityText,
+    descriptionText
+  );
+  create(newItem.name, newItem.dueDate, newItem.priority, newItem.description);
+
+  document.getElementById("form").reset();
 }

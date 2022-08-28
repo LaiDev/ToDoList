@@ -2,7 +2,7 @@
 
 let container = document.querySelector(".toDoCardsContainer");
 
-export function create(itemTitle, itemDueDate) {
+export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   let cardDiv = document.createElement("div");
   cardDiv.classList.add("toDoCard");
 
@@ -14,8 +14,14 @@ export function create(itemTitle, itemDueDate) {
   let dueDate = document.createElement("p");
   dueDate.innerHTML = itemDueDate;
   cardDiv.append(dueDate);
+  let priority = document.createElement("p");
+  priority.innerHTML = itemPriority;
+  cardDiv.append(priority);
+  let description = document.createElement("p");
+  description.innerHTML = itemDescription;
+  cardDiv.append(description);
   let removeBtn = document.createElement("button");
-  removeBtn.innerHTML = "Remove"
+  removeBtn.innerHTML = "Remove";
   removeBtn.classList.add("removeBtn");
   cardDiv.append(removeBtn);
 }

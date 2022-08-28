@@ -9,9 +9,20 @@
     <script defer type="module" src="./app.js"></script>
 </head>
 <body>
-    <form onsubmit="return false" class = "form" action="">
+    <form onsubmit="return false" id = "form" action="">
                     <label for="taskName">Task Name</label>
                     <input type="text" name="taskName" id="taskName" >
+                    <label for="taskDueDate">Due Date</label>
+                    <input type="date" name="taskDueDate" id ="taskDueDate">
+                    <label for="taskPriority">Priority</label>
+                    <select name="taskPriority" id="taskPriority">
+                        Priority
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                    <label for="taskDescription">Description</label>
+                    <input type="text" name="taskDescription" id="taskDescription">
                     <button type="submit" class = "createButton" >Create</button>
     </form>
     <div class="toDoCardsContainer"></div>
