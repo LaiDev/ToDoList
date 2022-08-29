@@ -89,6 +89,7 @@ body {
   justify-content: space-between;
   flex-direction: row-reverse;
   align-items: center;
+  gap: 5px;
 }
 
 .topRight {
@@ -99,4 +100,17 @@ body {
 .cardTitle {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.deleteCardButton {
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(216, 0, 0);
+}
+
+.deleteCardButton:hover
+{
+  background-color: black;
+  color: white;
 }
