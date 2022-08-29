@@ -49,11 +49,10 @@ export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   let priority = document.createElement("p");
   priority.innerHTML = itemPriority;
   priority.classList.add("cardPriority");
- 
 
   switch (priority.innerHTML) {
     case "Low":
-      cardDiv.style.backgroundColor = '#deffbf'
+      cardDiv.style.backgroundColor = "#deffbf";
       break;
     case "Medium":
       cardDiv.style.backgroundColor = "#ffffcc";
@@ -68,7 +67,17 @@ export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   description.classList.add("cardDescription");
   cardDiv.append(description);
 
+  let deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "X";
+  deleteButton.classList.add("deleteCardButton");
+  cardDiv.append(deleteButton);
+
   myArray.push(this);
   let totalTaskMessage = document.querySelector(".totalTaskMessage");
   totalTaskMessage.innerHTML = `Total Tasks: ${myArray.length}`;
+
+  deleteButton.addEventListener("click", () => {
+    console.log("click");
+    cardDiv.remove();
+  });
 }
