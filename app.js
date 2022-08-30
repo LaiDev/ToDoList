@@ -24,7 +24,8 @@ function renderInfo() {
   document.getElementById("form").style.visibility = "hidden";
 }
 
-create("Feed the Dog!", "2022-08-18", "Medium", "Give Delta her kibble");
-create("Do Dishes", "2022-08-18", "Low", "");
-create("Daily Coding", "2022-08-18", "High", "Work on The Odin Project");
+create("Feed the Dog!", "2022-08-29", "Medium", "Give Delta her kibble");
+create("Daily Coding", "2022-08-30", "High", "Work on The Odin Project");
+create("Do Dishes", "2022-09-18", "Low", "");
+
 
