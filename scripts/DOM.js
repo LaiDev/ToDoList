@@ -1,22 +1,27 @@
 let myArray = [];
-let name = "Aalaizha";
+let name = "Your Name";
 let WelcomeMessage = document.querySelector(".welcomeMessage");
 WelcomeMessage.innerHTML = `Welcome, ${name}`;
 
 const createTaskButton = document.querySelector(".addTaskButton");
+const closeForm = document.querySelector(".closeForm");
+
+closeForm.addEventListener("click", () => {
+  document.querySelector("#form").style.visibility = "hidden";
+  revertOpacity();
+});
 
 createTaskButton.addEventListener("click", function () {
   document.querySelector("#form").style.visibility = "visible";
+  document.querySelector(".taskContainer").style.opacity = ".3";
 });
-
-//Will create the to do cards as well as updating their text as new to do list items are created
 
 let container = document.querySelector(".tasksGrid");
 
-//Card div is a flex item. Top part is divided into two divs
-console.log(myArray.length);
-
 export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
+  //Sets the website opacity back to its original value after the form closes
+  revertOpacity();
+
   let cardDiv = document.createElement("div");
   cardDiv.classList.add("toDoCard");
   container.append(cardDiv);
@@ -50,6 +55,8 @@ export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   priority.innerHTML = itemPriority;
   priority.classList.add("cardPriority");
 
+  //Changes the task card colors based on their priority
+
   switch (priority.innerHTML) {
     case "Low":
       cardDiv.style.backgroundColor = "#deffbf";
@@ -76,8 +83,13 @@ export function create(itemTitle, itemDueDate, itemPriority, itemDescription) {
   let totalTaskMessage = document.querySelector(".totalTaskMessage");
   totalTaskMessage.innerHTML = `Total Tasks: ${myArray.length}`;
 
+  //Checks to see if the delete Button has been pressed. If so, delete the card that is selected.
+
   deleteButton.addEventListener("click", () => {
-    console.log("click");
     cardDiv.remove();
   });
+}
+
+function revertOpacity() {
+  document.querySelector(".taskContainer").style.opacity = "1";
 }
