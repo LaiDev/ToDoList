@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-}
-
-.container {
-  width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-columns: 0.25fr 2fr;
-  grid-template-rows: 1fr;
+  background-color: #fcf4ef;
+  color: #4c5464;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.4rem;
+
 }
 
 #form {
@@ -27,8 +28,9 @@ body {
   top: 0;
   bottom: 0;
 
-  background-color: rgb(202, 251, 255);
-  border: 2px black solid;
+  background-color: #ed8366;
+  color: black;
+  border: 2px black solivisibled;
   border-radius: 10px;
   padding: 20px;
   gap: 15px;
@@ -36,24 +38,68 @@ body {
   height: 450px;
 }
 
-.taskContainer {
-  grid-column: 2;
+.closeForm
+{
+  width: 50px;
+  height: 45px;
+  align-self: flex-end;
+  
+  background-color: #ff8080;
+  border: 2px black solid;
+  border-radius: 150px;
+}
 
+.closeForm:hover,
+.createButton:hover
+{
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.createButton{
+  border: 2px black solid;
+  border-radius: 10px;
+  background-color: aquamarine;
+}
+
+.taskContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: auto;
+  
+}
+
+.messages {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-family: "Fredoka One", cursive;
+  font-weight: lighter;
+  font-size: 4rem;
+}
+
+.totalTaskMessage {
+  font-weight: bold;
 }
 
 .taskContent {
   min-width: 200px;
   width: 70%;
   height: auto;
+  background-color: rgb(209, 252, 255);
   border: 2px black solid;
   border-radius: 10px;
   padding: 15px;
 
   padding-bottom: 35px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,6 +110,9 @@ body {
   gap: 15px;
   align-items: center;
   width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 20px;
 }
 
 .addTaskButton {
@@ -74,7 +123,7 @@ body {
 }
 .tasksGrid {
   display: grid;
-  width: 100%;
+  width: 80%;
   margin-top: 15px;
   grid-template-columns: 0.5fr 0.5fr;
   gap: 10px;
@@ -92,7 +141,6 @@ body {
   height: auto;
 
   border-radius: 5px;
-  font-size: 1.2rem;
 }
 
 .topCardContainer {
@@ -109,8 +157,8 @@ body {
 }
 
 .cardTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .deleteCardButton {
@@ -125,9 +173,13 @@ body {
   color: white;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .tasksGrid {
     grid-template-columns: 1fr;
     width: fit-content;
+  }
+
+  #form {
+    width: 50vw;
   }
 }
