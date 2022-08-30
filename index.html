@@ -9,11 +9,13 @@
     <script defer type="module" src="./app.js"></script>
 </head>
 <body>
-    <div class = "container">
-        
+
         <div class = "taskContainer">
-            <h1 class="welcomeMessage"></h1>
-            <p class="totalTaskMessage"></p>
+            <div class="messages">
+                <h1 class="welcomeMessage"></h1>
+                <p class="totalTaskMessage"></p>
+            </div>
+            
             <div class="taskContent">
                 <div class="topContent">
                     <h2>My Tasks</h2>
@@ -25,6 +27,7 @@
             </div>
         </div>
         <form onsubmit="return false" id = "form" action="">
+            <button class = "closeForm">X</button>
             <label for="taskName">Task Name</label>
             <input type="text" name="taskName" id="taskName" maxlength="25px" placeholder="name">
             <label for="taskDueDate">Due Date</label>
@@ -39,8 +42,7 @@
             <label for="taskDescription">Description</label>
             <input type="text" name = "taskDescription" id = "taskDescription" maxlength="40">
             <button type="submit" class = "createButton" >Create</button>
-</form>
-    </div>
-        
+        </form>        
+    
 </body>
 </html>
